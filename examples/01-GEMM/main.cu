@@ -68,6 +68,7 @@ void test_cublas_sgemm_ex(int m, int n, int k) {
     free(C_cpu);
 
     curandDestroyGenerator(generator);
+    cublasDestroy(handle);
     free_matrix_memory(A);
     free_matrix_memory(B);
     free_matrix_memory(C);
